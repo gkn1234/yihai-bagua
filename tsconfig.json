@@ -1,0 +1,16 @@
+{
+  "desc": "用于jest进行测试",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "sourceMap": true,
+    "types": ["jest"],
+    "paths": {
+      "@yhbagua/*": ["./packages/*/src"]
+    }
+  },
+  "include": [
+    "./packages/*/src",
+    "./packages/*/__tests__"
+  ]
+}

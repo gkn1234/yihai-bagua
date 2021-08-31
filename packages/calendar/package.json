@@ -1,0 +1,30 @@
+{
+  "name": "@yhbagua/calendar",
+  "version": "0.0.0",
+  "description": "Chinese lunar calendar.",
+  "author": "Guo Kainan",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "build:common": "vite build",
+    "build": "yarn build:common"
+  },
+  "main": "./dist/yhbagua-calendar.umd.js",
+  "module": "./dist/yhbagua-calendar.es.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/yhbagua-calendar.es.js",
+      "require": "./dist/yhbagua-calendar.umd.js"
+    }
+  },
+  "dependencies": {
+    "@yhbagua/astro": "^0.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@yhbagua/astro",
+  "version": "0.0.0",
+  "description": "The Astro algorithm from Shouxing calendar for Chinese lunar",
+  "author": "Guo Kainan",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "build:common": "vite build",
+    "build": "yarn build:common"
+  },
+  "main": "./dist/yhbagua-astro.umd.js",
+  "module": "./dist/yhbagua-astro.es.js",
+  "types": "./dist/src/index.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/yhbagua-astro.es.js",
+      "require": "./dist/yhbagua-astro.umd.js"
+    }
+  }
+}
